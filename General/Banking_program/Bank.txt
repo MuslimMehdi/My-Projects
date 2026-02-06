@@ -1,0 +1,47 @@
+This is pure human with many mistakes but the bank.py is this code but improved and edited by Blackbox(an AI assisted LLM)
+This would have looked better if I had used a flow chart 
+
+
+class Account :
+    def __init__(self, balance, withdraw_or_deposit):
+        self.balance = int(balance)
+        self.withdraw_or_deposit =int(withdraw_or_deposit)
+            
+    def updated_balance(self):
+          self.balance += self.withdraw_or_deposit
+          return self.balance
+
+class Savings_Account(Account):
+    def __init__(self,balance,withdraw_or_deposit):
+        super().__init__(balance,withdraw_or_deposit)
+        self.Savings_profit = balance * 0.1026
+        return self.Savings_profit
+    
+
+account=Account()
+    
+stop = False
+while stop == False:
+
+    b = int(input("""Which account would you loke to use:\n1. Current Account\n2. Savings Account\n\n:"""))
+    a = int(input("What would you like to do :\n1. Deposit\n2. Withdraw\n3. View Balance\n\n:"))
+        
+    if a == 1:
+        i = int(input("Enter the amount of deposition:\n"))
+
+    elif a == 2: 
+        i = int(input("Enter the amount of withdrawal:\n"))
+        i = -i
+
+    elif a == 3:
+        print (f"{account.updated_balance():,}")
+     
+    else:
+        print("Invalid Response")
+
+    
+    q = int(input("To continue press 1 or else press 2"))
+    if q == 1 :
+        stop = False
+    elif q == 2:
+        stop = True
