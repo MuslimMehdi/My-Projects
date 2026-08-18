@@ -1,12 +1,17 @@
+# Author: Muslim Mehdi
+# What is Chudnovsky algorithm ?
+# The Chudnovsky algorithm is a fast method for calculating the digits of π, based on Ramanujan's π formulae. Published by the Chudnovsky brothers in 1988, it was used to calculate π to a billion decimal places
+# THe img of the Algorith: https://wikimedia.org/api/rest_v1/media/math/render/svg/92de4089426ebd422c9e4cd43680fe849f5d83f5
+
 from decimal import Decimal, getcontext
 from math import factorial
 
 def chudnovsky_pi(digits):
-    """
-    Compute π using the Chudnovsky algorithm to the specified number of digits.
-    :param digits: Number of decimal digits of π to compute.
-    :return: Computed value of π.
-    """
+
+    # Compute π using the Chudnovsky algorithm to the specified number of digits.
+    # :param digits: Number of decimal digits of π to compute.
+    # :return: Computed value of π.
+
     # Set precision for decimal calculations
     getcontext().prec = digits + 2  # Extra digits for internal precision
 
